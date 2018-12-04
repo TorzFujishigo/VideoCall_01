@@ -8,11 +8,13 @@ $(function() {
 
   let localStream;
   let existingCall;
+// [[[ fujiIns 2018/12/04 14:51:04
+var connection = new WebSocket('http://a061.asdxasd.com:3000', ['soap', 'xmpp']);
+// ]]]
 
   peer.on('open', () => {
     $('#my-id').text(peer.id);
 // [[[ fujiIns 2018/12/04 14:51:04
-var connection = new WebSocket('http://a061.asdxasd.com:3000', ['soap', 'xmpp']);
 // When the connection is open, send some data to the server
 connection.onopen = function () {
   connection.send('Ping'); // Send the message 'Ping' to the server
