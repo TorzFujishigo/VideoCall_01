@@ -28,7 +28,7 @@ $(function() {
     s.emit("chat message", peer.id); // サーバへ送信
 // ]]]
 
-};
+///};
 // ]]]
 
     step1();
