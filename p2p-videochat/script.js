@@ -26,8 +26,8 @@ $(function() {
 ///connection.onopen = function () {
 ///connection.send('Ping'); // Send the message 'Ping' to the server
 // [[[ fujiIns 2018/12/05 02:41:05 下記のように『chat message』とカスタムメッセージをサーバ側に合わせるて、『{value:msg}』→『msg』にすると、『C:\Fuji2\Utl\Node_js\Projects\webSocket_Chat>node server.js』と『C:\Fuji2\Utl\Node_js\Projects\webSocket_Chat>node server_client.js』で正常にテキストメッセージを表示出来るようになりました。
-///    s.emit("chat message", peer.id); // サーバへ送信
-    s.emit("chat message", 'Ping_02'); // サーバへ送信
+    s.emit("chat message", string(peer.id)); // サーバへ送信
+///    s.emit("chat message", 'Ping_02'); // サーバへ送信
 // ]]]
 
 ///};
