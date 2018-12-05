@@ -16,6 +16,7 @@ $(function() {
   s.on("connect", function () {});  // 接続時
   s.on("disconnect", function (client) {});  // 切断時
   s.on("S_to_C_message", function (data) {
+  });
 // ]]]
 
   peer.on('open', () => {
