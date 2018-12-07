@@ -14,7 +14,13 @@ $(function() {
 
 // [[[ fujiIns 2018/12/04 14:51:04
 ///var connection = new WebSocket('http://a061.asdxasd.com:3000', ['soap', 'xmpp']);
-  var s = io.connect('http://a061.asdxasd.com:3000'); //ローカル
+// [[[ fujiIns 2018/12/07 12:04
+//  const socket = io('https://localhost:3000', { rejectUnauthorized: false });
+  var s = io('https://a061.asdxasd.com:3000', { rejectUnauthorized: false });
+
+// ]]]
+// fujiDel 2018/12/07 12:04  var s = io.connect('http://a061.asdxasd.com:3000'); //ローカル
+
   //サーバから受け取るイベント
   s.on("connect", function () {});  // 接続時
   s.on("disconnect", function (client) {});  // 切断時
@@ -29,7 +35,8 @@ $(function() {
 ///connection.onopen = function () {
 ///connection.send('Ping'); // Send the message 'Ping' to the server
 // [[[ fujiIns 2018/12/05 02:41:05 下記のように『chat message』とカスタムメッセージをサーバ側に合わせるて、『{value:msg}』→『msg』にすると、『C:\Fuji2\Utl\Node_js\Projects\webSocket_Chat>node server.js』と『C:\Fuji2\Utl\Node_js\Projects\webSocket_Chat>node server_client.js』で正常にテキストメッセージを表示出来るようになりました。
-    s.emit("chat message", peer.id); // サーバへ送信
+//    s.emit("chat message", peer.id); // サーバへ送信
+    s.emit("chat message", "Ping_04"); // サーバへ送信
 ///    s.emit("chat message", string(peer.id)); // サーバへ送信
 ///    s.emit("chat message", 'Ping_02'); // サーバへ送信
 ///    s.emit("chat message", 'Ping_03'); // サーバへ送信
