@@ -16,7 +16,7 @@ $(function() {
 ///var connection = new WebSocket('http://a061.asdxasd.com:3000', ['soap', 'xmpp']);
 // [[[ fujiIns 2018/12/07 12:04
 //  const socket = io('https://localhost:3000', { rejectUnauthorized: false });
-  var s = io('https://a061.asdxasd.com:3000', { rejectUnauthorized: false });
+  var s = io.connect('https://a061.asdxasd.com:3000', { rejectUnauthorized: false });
 
 // ]]]
 // fujiDel 2018/12/07 12:04  var s = io.connect('http://a061.asdxasd.com:3000'); //ローカル
